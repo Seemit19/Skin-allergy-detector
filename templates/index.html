@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Allergy Detective & Remedy Tracker</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Allergy Detective & Remedy Tracker</h1>
+      <p class="subtitle">
+        Describe your problem in natural language (e.g. "doodh piya and pet dard ho gya").
+      </p>
+
+      <section class="card">
+        <h2>Analyze Allergy</h2>
+        <form id="analyze-form">
+          <textarea
+            id="issue"
+            placeholder="Type your symptoms/problem in Hindi, English, or mixed language..."
+            rows="4"
+            required
+          ></textarea>
+          <button type="submit">Analyze & Save Log</button>
+        </form>
+        <p id="status"></p>
+        <div id="analysis-result" class="hidden"></div>
+      </section>
+
+      <section class="card">
+        <h2>Allergy History</h2>
+        <div id="history-list"></div>
+      </section>
+
+      <section class="card">
+        <h2>Allergy Report</h2>
+        <div id="report-summary"></div>
+        <div class="report-grid">
+          <div>
+            <h3>Allergy Frequency</h3>
+            <ul id="allergy-frequency"></ul>
+          </div>
+          <div>
+            <h3>Trigger Factor Frequency</h3>
+            <ul id="factor-frequency"></ul>
+          </div>
+          <div>
+            <h3>Daily Allergy Logs</h3>
+            <ul id="daily-frequency"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
